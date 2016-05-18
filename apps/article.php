@@ -10,7 +10,7 @@
     
     while( $i <  $count ) {
         $tache = $taches[$i];
-        require('views/list-tache.phtml');
+        require('views/article.phtml');
 
         $i++;
     }
