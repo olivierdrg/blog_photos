@@ -1,0 +1,99 @@
+body{
+	margin:0;
+}
+
+nav{
+	text-align: center;
+}
+
+nav li{
+	display: inline-block;
+	padding: 30px 30px 30px 30px;
+}
+
+nav a{
+	text-decoration:none;
+	color:white;
+	font-size:20px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1{
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	background-color: #509139;
+	width: 30%;
+	margin-bottom:-90px;
+	padding: 3px 0 3px 0;
+	color:white;
+	border-radius:0 0 50px 0;
+	margin-left:350px;
+	text-shadow:2px 2px 2px black;
+	box-shadow: 2px 2px 2px black;
+}
+
+img{
+	width:300px;
+	height:auto;
+	border-radius:100% 100% 100% 100%;
+	box-shadow: 2px 2px 2px black;
+	margin-bottom: 10px;
+
+}
+
+p{
+	font-size: 16px;
+	text-align: justify;
+	height:120px;
+	overflow: auto;
+	padding-right:10px;
+}
+
+.header, .footer{
+	background-color:#BFD02C;
+}
+
+.footer{
+	height:auto;
+	margin-top:50px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer nav li{
+	display: inline-block;
+	padding: 15px 30px 15px 30px;
+}
+
+.footer nav a{
+	text-decoration:none;
+	color:white;
+	font-size:14px;
+}
+
+.blog{
+	text-align: center;
+	height:40px;
+	padding-top:10px;
+	font-size: 14px;
+}
+
+.container{
+	margin-top: 100px;
+}
+
+.wrap{
+	overflow:hidden;
+	margin:20px 150px 100px 150px;
+}
+
+.gauche{
+	float:left;
+	width:40%;
+}
+
+.droite{
+	float:left;
+	width:50%;
+	padding:80px 0 0 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
