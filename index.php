@@ -34,7 +34,8 @@
     $page = 'admin';
     
     $access = array(
-        'articles',        
+        'articles', 
+        'detail-article',        
         'contact',
         'login',
         'register',
