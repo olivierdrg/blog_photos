@@ -34,7 +34,7 @@
     $page = 'admin';
     
     $access = array(
-        'article',        
+        'articles',        
         'contact',
         'login',
         'register',
@@ -44,7 +44,7 @@
         'edit-article',
         'suppr-article',
         'creer-commentaire',
-        'suppr-commentaire',       
+        'suppr-commentaire',     
     );
 
     $access_traitement = array(      
