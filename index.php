@@ -34,7 +34,7 @@
     $page = 'admin';
     
     $access = array(
-        'article',        
+        'articles',        
         'contact',
         'login',
         'register',
@@ -44,6 +44,7 @@
         'edit-article',
         'suppr-article',
         'creer-commentaire',
+        'edit-commentaire',
         'suppr-commentaire',       
     );
 
@@ -56,6 +57,7 @@
         'edit-article',
         'suppr-article',
         'creer-commentaire',
+        'edit-commentaire',
         'suppr-commentaire',         
     );   
 
