@@ -1,8 +1,8 @@
 <?php
     $nav_menu = array(
         'article' => array(
-            'page'      => 'article',
-            'name'      => 'Article',
+            'page'      => 'articles',
+            'name'      => 'Articles',
             'active'    => '',
         ),        
         'login' => array(
