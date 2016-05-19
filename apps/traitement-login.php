@@ -6,11 +6,12 @@
     *
     */
     function verify_user( $form, $link ) {
-        $error          = true;
+        $error          = true;/** Pascal : Stockez plutôt une variable $success que $error, c'est plus logique dans la suite du code **/
         $user_login     = $form['login']['value'];
         $user_password  = $form['password']['value'];
 
-        $query = 'SELECT login, password, role FROM admins';
+        $query = 'SELECT login, password, role FROM admins';/** Pascal : Rajoutez une condition pour récupérer directement le bon user s'il existe **/
+        /** Pascal : SELECT login, password, role FROM admins WHERE login=$user_login **/
         $res = mysqli_query( $link, $query );
 
 
