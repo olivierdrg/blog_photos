@@ -45,6 +45,7 @@
         'suppr-article',
         'creer-commentaire',
         'suppr-commentaire',     
+        'edit-commentaire',
     );
 
     $access_traitement = array(      
@@ -56,6 +57,7 @@
         'edit-article',
         'suppr-article',
         'creer-commentaire',
+        'edit-commentaire',
         'suppr-commentaire',         
     );   
 

@@ -1,6 +1,6 @@
 @backColor : #262626;
 @linkColor : #D98926;
-@textcolor : #787676;
+@textcolor : #fff;
 @footerColor : #212121;
 
 
@@ -72,10 +72,14 @@ hr {
     position: absolute;
     top: 10px;
     right: 10px;
-    color: @footerColor;
+    color: @textcolor;
 
     span {
       color: @linkColor;
+    }
+
+    li {
+      list-style-type: none;
     }
   }
 }
