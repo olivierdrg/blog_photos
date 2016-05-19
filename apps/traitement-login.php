@@ -5,27 +5,23 @@
     * @param array $form
     *
     */
-    function verify_user( $form ) {
+    function verify_user( $form, $link ) {
         $error          = true;
         $user_login     = $form['login']['value'];
         $user_password  = $form['password']['value'];
 
-        $filename = "users.json";
-        $data = file_get_contents( $filename );
-        $users = json_decode( $data, true );
+        $query = 'SELECT login, password, role FROM admins';
+        $res = mysqli_query( $link, $query );
 
-        $i = 0;
-        $count = count( $users );
 
-        while ( $i < $count ) {
-            $user = $users[$i];
+        while ( $ligne = mysqli_fetch_assoc( $res )  ){
 
-            if ( $user['firstname'] == $user_login  && $user['password'] == $user_password ) {
+            if ( $ligne['login'] == $user_login  && $ligne['password'] == $user_password ) {
                 $error = false;
-                $_SESSION['login'] = $user_login;
+                $_SESSION['login']  = $user_login;
+                $_SESSION['role']   = $ligne['role'];
             }
 
-            $i++;
         }
 
         return $error;        
@@ -60,7 +56,7 @@
             $form['error'] = true;            
         }
 
-        $form['error'] = verify_user( $form );
+        $form['error'] = verify_user( $form, $link );
 
         if ( !$form['error'] ) {
 

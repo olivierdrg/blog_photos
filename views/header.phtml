@@ -2,6 +2,8 @@
     <div class="header-login-message">
         <?= $login_info['message'] ?>
         <a href="?page=<?= $login_info['page'] ?>"><span class="glyphicon glyphicon-log-<?= $login_info['icon'] ?>" aria-hidden="true"></span></a>
+        <?php require('apps/display-admin-menu.php'); ?>
+
     </div>
     <nav class="navbar navbar-inverse">
             <div class="row">                        

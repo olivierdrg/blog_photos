@@ -1,18 +1,8 @@
 <?php
     $nav_menu = array(
-        'home' => array(
-            'page'      => 'home',
-            'name'      => 'Home',
-            'active'    => '',
-        ),
-        'taches' => array(
-            'page'      => 'taches',
-            'name'      => 'Taches',
-            'active'    => '',
-        ),
-        'list-taches' => array(
-            'page'      => 'list-taches',
-            'name'      => 'List Taches',
+        'article' => array(
+            'page'      => 'articles',
+            'name'      => 'Articles',
             'active'    => '',
         ),        
         'login' => array(

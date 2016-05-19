@@ -18,34 +18,47 @@
     }
 
     session_start();
+    require('config.php');
+
+    $link = mysqli_connect( $serveur ,$username, $password, $database);
+    if ( !$link ) {
+        require('views/bigerror.phtml');
+        exit;
+    }
 
     define( 'LIB', 'public/' );
     define( 'IMAGE_PATH', LIB . 'images/' );
     define( 'CSS_PATH', LIB . 'css/' );
     define( 'JS_PATH', LIB . 'js/' );
     
-    $page = 'home';
+    $page = 'admin';
     
     $access = array(
-        'home',
-        'taches',
-        'list-taches',
-        'edit-tache',
-        'supp-tache',
-        'dupli-tache',
+        'articles',        
+        'contact',
         'login',
         'register',
         'logout',
-
+        'admin',
+        'creer-article',
+        'edit-article',
+        'suppr-article',
+        'creer-commentaire',
+        'suppr-commentaire',     
+        'edit-commentaire',
     );
 
-    $access_traitement = array(
+    $access_traitement = array(      
         'login',
         'register',
-        'edit-tache',
-        'supp-tache',
-        'dupli-tache',
         'logout',
+        'contact',
+        'creer-article',
+        'edit-article',
+        'suppr-article',
+        'creer-commentaire',
+        'edit-commentaire',
+        'suppr-commentaire',         
     );   
 
     if ( isset( $_GET['page'] ) ) {
