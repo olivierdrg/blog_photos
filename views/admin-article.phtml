@@ -1,13 +1,10 @@
 <!-- Page à traiter. laisser le HTML modifier le CSS -->
 <tr>
-    <td><a href="?page=edit-tache&id=<?= $id ?>">Edit</a></td>
-    <td><a href="?page=supp-tache&id=<?= $id ?>">Supprimer</a></td>
-    <td><a href="?page=dupli-tache&id=<?= $id ?>">Duppliquer</a></td>
-    <td><?= $tache['titre'] ?></td>
-    <td><?= $tache['description'] ?></td>
-    <td><?= $tache['priorite'] ?></td>
-    <td><?= $tache['date-crea'] ?></td>
-    <td><?= $tache['date-rea'] ?></td>
-    <td><?= $tache['description'] ?></td>
-    <td><?= $tache['commentaire'] ?></td>
+    <td><a href="?page=edit-article&id=<?= $ligne['id_articles'] ?>">Edit</a></td>
+    <td><a href="?page=suppr-article&id=<?= $ligne['id_articles'] ?>">Supprimer</a></td>
+    <td><?= $ligne['date'] ?></td>
+    <td><img src="<?= $ligne['photo'] ?>"></td>
+    <td><?= $ligne['titre'] ?></td>
+    <td><?= $ligne['id_admins'] ?></td>
+    <td><?= $ligne['descriptif'] ?></td>
 </tr>

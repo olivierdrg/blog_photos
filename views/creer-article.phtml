@@ -1,0 +1,39 @@
+<p>Creation article <span class="message"><?= $form['message'] ?></span></p>
+<form method="POST" class="register-form" enctype="multipart/form-data" action="#register" id="register">
+    <input type="hidden" name="form[id_admins]" value="<?= $_SESSION['id']  ?>">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <label for="titre">Titre</label>
+                <input type="text" id="titre" name="form[titre]" value="<?= $form['titre']['value'] ?>" class="<?= $form['titre']['class'] ?>">
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <label for="photo">Photo</label>
+                <input type="text" id="photo" name="form[photo]" value="<?= $form['photo']['value'] ?>" class="<?= $form['photo']['class'] ?>">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <label for="descriptif">Descriptif</label>
+                <input type="text" id="descriptif" name="form[descriptif]" value="<?= $form['descriptif']['value'] ?>" class="<?= $form['descriptif']['class'] ?>">
+            </div>
+        </div>
+    </div>        
+
+
+     <div class="row">
+        <div class="col-sm-12 submit">   
+            <button type="submit" class="button">Send</button>   
+        </div>
+    </div>
+
+</form>

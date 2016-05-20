@@ -1,18 +1,9 @@
 <?php
+    $query = 'SELECT * FROM articles';
+    $res = mysqli_query( $link, $query );
 
-    $filename = "taches.json";
-    $data = file_get_contents( $filename );
-    $taches = json_decode( $data, true );
-
-    $id = 0;
-    $i = 0;
-    $count = count( $taches );
-    
-    while( $i <  $count ) {
-        $tache = $taches[$i];
+    while ( $ligne = mysqli_fetch_assoc( $res ) ) {
         require('views/admin-article.phtml');
-
-        $i++;
     }
 
 ?>

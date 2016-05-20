@@ -1,4 +1,9 @@
 <?php
-    if ( isset( $_SESSION['login'] ) && $_SESSION['login'] != '' )
-        require('views/admin-articles.phtml');
+
+    if ( isset( $_SESSION['login'] ) ) {
+
+        if ( isset( $_SESSION['role'] ) && $_SESSION['role'] == 'admin' )
+            require('views/admin-articles.phtml');
+    }
+
 ?>

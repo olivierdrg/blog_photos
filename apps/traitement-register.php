@@ -5,39 +5,35 @@
     * @param array $form
     *
     */
-    function register_user( $form ) {
-        $filename = "users.json";
+    function register_user( $form, $link ) {
 
-        unset( $form['error'] );
+        unset( $form['success'] );
         unset( $form['message'] );
         unset( $form['confirm-password'] );
+        $form['date']['value'] = date('Y-m-d H:m:i');
+        $form['password']['value'] = password_hash( $form['password']['value'], PASSWORD_BCRYPT, array("cost"=>8) );
 
         foreach ( $form as $key => $value ) {
-            $user[$key] = $value['value'];
+            $sql_into[] = $key;
+            $sql_value[] =  '\'' . $value['value'] . '\'';
         }
 
-        $data = file_get_contents( $filename );
-        $users = json_decode( $data, true );
+        $sql_into   = implode( ',', $sql_into );
+        $sql_value  = implode( ',', $sql_value );
 
-        $users[] = $user;
-
-        $data = json_encode( $users );
-        file_put_contents( $filename, $data );
-        
+        $query = 'INSERT INTO admins (' . $sql_into . ') VALUES (' . $sql_value . ')';
+        // var_dump( $query );
+        $res = mysqli_query( $link, $query );
     }
     
     $form = array(
-        'error'     => false,
+        'success'   => true,
         'message'   => '',
-        'name' => array(
+        'login' => array(
             'value' => '',
             'class' => '',
         ),
-        'firstname' => array(
-            'value' => '',
-            'class' => '',
-        ),
-        'mail' => array(
+        'email' => array(
             'value' => '',
             'class' => '',
         ),
@@ -58,40 +54,35 @@
             $form[$key]['value']  = $value;
         }
 
-        if ( strlen( $form['name']['value'] ) < 3 ) {
-            $form['error'] = true;
-            $form['name']['class']  = 'error';
+        if ( strlen( $form['login']['value'] ) < 3 ) {
+            $form['success'] = false;
+            $form['login']['class']  = 'error';
         }
 
-        if ( strlen( $form['firstname']['value'] ) < 3 ) {
-            $form['error'] = true;
-            $form['firstname']['class']  = 'error';
-        }
-
-        if ( !filter_var( $form['mail']['value'], FILTER_VALIDATE_EMAIL ) ) {
-            $form['error'] = true;
-            $form['mail']['class']  = 'error';
+        if ( !filter_var( $form['email']['value'], FILTER_VALIDATE_EMAIL ) ) {
+            $form['success'] = false;
+            $form['email']['class']  = 'error';
         }
 
         if ( strlen( $form['password']['value'] ) < 3 ) {
-            $form['error'] = true;
+            $form['success'] = false;
             $form['password']['class']  = 'error';
         }
 
         if ( strlen( $form['confirm-password']['value'] ) < 3 ) {
-            $form['error'] = true;
+            $form['success'] = false;
             $form['confirm-password']['class']  = 'error';
         }    
 
         if ( $form['password']['value'] != $form['confirm-password']['value'] ) {
-            $form['error'] = true;
+            $form['success'] = false;
             $form['password']['class']  = 'error';
             $form['confirm-password']['class']  = 'error';
         }  
 
-        if ( !$form['error'] ) {
+        if ( $form['success'] ) {
 
-            register_user( $form );
+            register_user( $form, $link );
 
             header('Location: index.php?page=login');
             exit;            
