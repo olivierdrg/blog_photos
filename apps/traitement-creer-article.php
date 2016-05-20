@@ -67,11 +67,6 @@
             $form['photo']['class']  = 'error';
         }
 
-        if ( strlen( $form['auteur']['value'] ) < 3 ) {
-            $form['success'] = false;
-            $form['auteur']['class']  = 'error';
-        }
-
         if ( strlen( $form['descriptif']['value'] ) < 3 ) {
             $form['success'] = false;
             $form['descriptif']['class']  = 'error';
