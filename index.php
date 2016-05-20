@@ -61,7 +61,7 @@
         'edit-commentaire',
         'suppr-commentaire',         
     );   
- var_dump( $_GET );
+
     if ( isset( $_GET['page'] ) ) {
         if ( in_array( $_GET['page'], $access ) ) {
             $page = $_GET['page'];
