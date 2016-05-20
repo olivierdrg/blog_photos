@@ -28,6 +28,6 @@ if (isset($_POST['id_articles'], $_POST['id_admins'], $_POST['descriptif']))
 			exit;
 	}
 	else
-		$error = 'Vous devez vous connecté pour poster un commentaire.';
+		$error = 'Vous devez vous connecter pour poster un commentaire.';
 }
 ?>
