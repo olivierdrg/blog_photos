@@ -77,7 +77,7 @@
 
             register_article( $form, $link );
 
-            header('Location: index.php?page=login');
+            header('Location: index.php?page=articles');
             exit;            
 
         } else {
