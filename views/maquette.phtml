@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
+         <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+        <script src="<?= $js_path ?>jquery-2.2.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/less.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+        <title>Blog Photos</title>
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <h1>Article</h1>
+            <div class="wrap">
+                <div class="gauche">
+                    <img src="../public/images/image_1.jpg"/>
+                </div>
+                <div class="droite">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, eum. Aliquid voluptatibus minima doloremque rerum quidem, laudantium delectus, temporibus architecto officiis maxime culpa reiciendis pariatur magnam fugit, illo qui fugiat.
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat aut obcaecati, ullam eveniet aperiam, harum nobis assumenda nisi, impedit saepe voluptatum. Nam cum, dolore eius assumenda iste corporis, dicta blanditiis!
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero natus magni quaerat molestias sit ipsam earum, tenetur iste beatae quas aut consequuntur autem aliquid a, eaque assumenda odit rerum enim.
+                    </p>
+                    <div class="author">Admin</div>
+                    <div class="date"><?= date("m/d/Y H\hi")?></div>
+                    <button>Ajouter un commentaire</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="blog">Blog Photos - 2016</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+   </body>
+</html>
