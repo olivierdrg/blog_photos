@@ -9,5 +9,14 @@
 </div>
 
 <div>
-	<a href="?page=detail-article&id=<?= $ligne['id_articles'] ?>">En savoir plus</a>
+<?php
+
+    require('apps/commentaires.php');
+?>
+</div>
+
+<div>
+<?php
+    require('apps/creer-commentaire.php');
+?>
 </div>

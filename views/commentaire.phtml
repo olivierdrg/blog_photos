@@ -1,5 +1,11 @@
-<!-- Page a traiter -->
-<p><?= $tache['titre'] ?> | <?= $tache['description'] ?> | <?= $tache['priorite'] ?> | <?= $tache['date-crea'] ?> <?= $tache['date-rea']?> | <?= $tache['commentaire']?></p>
+<div class="row">
+	<p>
+		<?= $commentaires['date'] ?>
+		<?= $commentaires['login'] ?>
+		<?= $commentaires['descriptif'] ?>
+	</p>
 
-
-
+<?php
+    require('apps/edit-commentaire.php');
+?>
+</div>

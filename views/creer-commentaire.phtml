@@ -1,21 +1,9 @@
-<!-- Page à traiter. laisser le HTML modifier le CSS -->
 <div class="row">
-    <div><a href="?page=edit-tache&id=new">Nouvelle Tache</a></div>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Titre</td>
-            <td>Description</td>
-            <td>Priorite</td>
-            <td>Date de creation</td>
-            <td>date realisation</td>
-            <td>Description</td>
-            <td>Commentaire</td>
-        </tr>
-    <?php
-        require('apps/list-tache.php');
-    ?>
-    </table>
+	<h4>Ajouter votre commentaire</h4>
+	<form method="post" action="?page=creer-commentaire" enctype="multipart/form-data">
+		<input type="hidden" name="id_articles" value="<?= $ligne['id_articles'] ?>">
+		<input type="hidden" name="id_admins" value="<?= $ligne['id_admins'] ?>">
+		<textarea name="descriptif" placeholder="Entrez votre commentaire ici"></textarea>
+	    <Input type="submit" name="valider" value="Valider">
+	</form>
 </div>
