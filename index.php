@@ -31,7 +31,7 @@
     define( 'CSS_PATH', LIB . 'css/' );
     define( 'JS_PATH', LIB . 'js/' );
     
-    $page = 'admin';
+    $page = 'articles';
     
     $access = array(
         'articles', 
