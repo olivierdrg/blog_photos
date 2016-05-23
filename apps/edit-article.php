@@ -16,7 +16,7 @@ if ( isset( $_GET['id'] ) ) {
             'class' => '',
         ), 		
         'titre' => array(
-            'value' => $ligne['titre'],
+            'value' => htmlentities( $ligne['titre'] ),
             'class' => '',
         ),
         'photo' => array(
@@ -24,7 +24,7 @@ if ( isset( $_GET['id'] ) ) {
             'class' => '',
         ),       
         'descriptif' => array(
-            'value' => $ligne['descriptif'],
+            'value' => htmlentities( $ligne['descriptif'] ),
             'class' => '',
         ),  
 
