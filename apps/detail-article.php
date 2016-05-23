@@ -9,6 +9,6 @@ if ( isset( $_GET['id'] ) ) {
 
     $ligne = mysqli_fetch_assoc( $res );  
 
-	require htmlentities('views/detail-article.phtml');	
+	require('views/detail-article.phtml');	
 }    
 ?>

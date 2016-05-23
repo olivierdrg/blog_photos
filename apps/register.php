@@ -1,3 +1,3 @@
 <?php
-    require htmlentities('views/register.phtml');
+    require('views/register.phtml');
 ?>

@@ -1,3 +1,3 @@
 <?php
-    require htmlentities('views/login.phtml');
+    require('views/login.phtml');
 ?>

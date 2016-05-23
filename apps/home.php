@@ -1,3 +1,3 @@
 <?php
-    require htmlentities('views/home.phtml');
+    require('views/home.phtml');
 ?>

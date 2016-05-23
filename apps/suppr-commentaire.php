@@ -1,3 +1,3 @@
 <?php
-	require htmlentities('views/suppr-commentaire.phtml');
+	require('views/suppr-commentaire.phtml');
 ?>
