@@ -15,14 +15,14 @@
 
         foreach ( $form as $key => $value ) {
             $sql_into[] = $key;
-            $sql_value[] =  '\'' . $value['value'] . '\'';
+            $sql_value[] =  '\'' . mysqli_real_escape_string( $value['value'] ) . '\'';
         }
 
         $sql_into   = implode( ',', $sql_into );
         $sql_value  = implode( ',', $sql_value );
 
         $query = 'INSERT INTO admins (' . $sql_into . ') VALUES (' . $sql_value . ')';
-        // var_dump( $query );
+        //var_dump( $query );
         $res = mysqli_query( $link, $query );
     }
     
