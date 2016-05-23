@@ -14,7 +14,7 @@
 
         foreach ( $form as $key => $value ) {
             $sql_into[] = $key;
-            $sql_value[] =  '\'' . $value['value'] . '\'';
+            $sql_value[] =  '\'' . mysqli_real_escape_string( $link, $value['value'] ) . '\'';
         }
 
         $sql_into   = implode( ',', $sql_into );
