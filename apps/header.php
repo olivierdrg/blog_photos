@@ -21,5 +21,5 @@
         $nav_menu[$page]['active'] = 'active';
     }
     
-    require('views/header.phtml');
+    require htmlentities('views/header.phtml');
 ?>

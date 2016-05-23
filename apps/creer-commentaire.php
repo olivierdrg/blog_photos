@@ -1,3 +1,3 @@
 <?php
-    require('views/creer-commentaire.phtml');
+    require htmlentities('views/creer-commentaire.phtml');
 ?>

@@ -1,3 +1,3 @@
 <?php
-require('views/edit-commentaire.phtml');
+require htmlentities('views/edit-commentaire.phtml');
 ?>

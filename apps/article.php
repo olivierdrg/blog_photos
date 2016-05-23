@@ -4,6 +4,6 @@
     $res = mysqli_query( $link, $query );
 
     while ( $ligne = mysqli_fetch_assoc( $res )  ){
-        require('views/article.phtml');
+        require htmlentities('views/article.phtml');
     }  
 ?>

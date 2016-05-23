@@ -4,6 +4,6 @@
     $res = mysqli_query( $link, $query );
 
     while ( $commentaires = mysqli_fetch_assoc( $res )  ){
-        require('views/commentaire.phtml');
+        require htmlentities('views/commentaire.phtml');
     }  
 ?>
