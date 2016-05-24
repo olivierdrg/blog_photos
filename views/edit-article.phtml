@@ -1,11 +1,11 @@
 <p>Creation article <span class="message"><?= $form['message'] ?></span></p>
 <form method="POST" class="register-form" enctype="multipart/form-data" action="#register" id="register">
-    <input type="hidden" name="form[id_articles]" value="<?= $form['id_articles']['value']  ?>">
+    <input type="hidden" name="form[id_articles]" value="<?= htmlentities ($form['id_articles']['value'])  ?>">
     <div class="row">
         <div class="col-sm-6">
             <div class="row">
                 <label for="titre">Titre</label>
-                <input type="text" id="titre" name="form[titre]" value="<?= $form['titre']['value'] ?>" class="<?= $form['titre']['class'] ?>">
+                <input type="text" id="titre" name="form[titre]" value="<?= htmlentities ($form['titre']['value']) ?>" class="<?= htmlentities ($form['titre']['class']) ?>">
             </div>
         </div>
     </div>
@@ -14,8 +14,8 @@
         <div class="col-sm-6">
             <div class="row">
                 <label for="photo">Photo</label>
-                <input type="text" id="photo" name="form[photo]" value="<?= $form['photo']['value'] ?>" class="<?= $form['photo']['class'] ?>">
-                <img src="<?= $form['photo']['value'] ?>" alt="image">
+                <input type="text" id="photo" name="form[photo]" value="<?= htmlentities ($form['photo']['value']) ?>" class="<?= htmlentities ($form['photo']['class']) ?>">
+                <img src="<?= htmlentities ($form['photo']['value']) ?>" alt="image">
             </div>
         </div>
     </div>

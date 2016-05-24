@@ -1,9 +1,9 @@
 <div class="row">
 	<p>
-		<?= $commentaires['date'] ?>
-		<?= $commentaires['login'] ?>
-		<?= $commentaires['descriptif'] ?>
+		<?= htmlentities ($commentaires['date']) ?>
+		<?= htmlentities ($commentaires['login']) ?>
+		<?= htmlentities ($commentaires['descriptif']) ?>
 	</p>
-   <a href="?page=edit-commentaire&id=<?= $commentaires['id_commentaires'] ?>">Edit</a>
+   <a href="?page=edit-commentaire&id=<?= htmlentities ($commentaires['id_commentaires']) ?>">Edit</a>
 
 </div>

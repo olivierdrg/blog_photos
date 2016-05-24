@@ -1,6 +1,6 @@
 <tr>
-    <td><a href="?page=edit-commentaire&id=<?= $ligne['id_commentaires'] ?>">Edit</a></td>
-    <td><a href="?page=suppr-commentaire&id=<?= $ligne['id_commentaires'] ?>">Supprimer</a></td>
-    <td><?= $ligne['date'] ?></td>
-    <td><?= $ligne['descriptif'] ?></td>
+    <td><a href="?page=edit-commentaire&id=<?= htmlentities ($ligne['id_commentaires']) ?>">Edit</a></td>
+    <td><a href="?page=suppr-commentaire&id=<?= htmlentities ($ligne['id_commentaires']) ?>">Supprimer</a></td>
+    <td><?= htmlentities ($ligne['date']) ?></td>
+    <td><?= htmlentities ($ligne['descriptif']) ?></td>
 </tr>

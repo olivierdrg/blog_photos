@@ -1,7 +1,7 @@
 <div>
 	<form method="post" action="?page=edit-commentaire" enctype="multipart/form-data">
 		<input type="hidden" name="id_commentaires" value="<?= $ligne['id_commentaires'] ?>">
-		<textarea name="descriptif"><?= $ligne['descriptif'] ?></textarea>
+		<textarea name="descriptif"><?= htmlentities ($ligne['descriptif']) ?></textarea>
 	    <Input type="submit" name="modifier" value="Modifier mon commentaire">
 	</form>
 </div>

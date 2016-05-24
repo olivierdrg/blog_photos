@@ -1,10 +1,10 @@
 <tr>
-    <td><a href="?page=edit-article&id=<?= $ligne['id_articles'] ?>">Edit</a></td>
-    <td><a href="?page=suppr-article&id=<?= $ligne['id_articles'] ?>">Supprimer</a></td>
-    <td><?= $ligne['date'] ?></td>
-    <td><img src="<?= $ligne['photo'] ?>"></td>
-    <td><?= $ligne['titre'] ?></td>
-    <td><?= $ligne['id_admins'] ?></td>
-    <td><?= $ligne['descriptif'] ?></td>
+    <td><a href="?page=edit-article&id=<?= htmlentities ($ligne['id_articles']) ?>">Edit</a></td>
+    <td><a href="?page=suppr-article&id=<?= htmlentities ($ligne['id_articles']) ?>">Supprimer</a></td>
+    <td><?= htmlentities ($ligne['date']) ?></td>
+    <td><img src="<?= htmlentities ($ligne['photo']) ?>"></td>
+    <td><?= htmlentities ($ligne['titre']) ?></td>
+    <td><?= htmlentities ($ligne['id_admins']) ?></td>
+    <td><?= htmlentities ($ligne['descriptif']) ?></td>
     <td><?php require('apps/admin-article-commentaire.php'); ?></td>
 </tr>

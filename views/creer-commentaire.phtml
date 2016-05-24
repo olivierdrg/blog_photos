@@ -1,8 +1,8 @@
 <div class="row">
 	<h4>Ajouter votre commentaire</h4>
 	<form method="post" action="?page=creer-commentaire" enctype="multipart/form-data">
-		<input type="hidden" name="id_articles" value="<?= $ligne['id_articles'] ?>">
-		<input type="hidden" name="id_admins" value="<?= $ligne['id_admins'] ?>">
+		<input type="hidden" name="id_articles" value="<?= htmlentities ($ligne['id_articles']) ?>">
+		<input type="hidden" name="id_admins" value="<?= htmlentities ($ligne['id_admins']) ?>">
 		<textarea name="descriptif" placeholder="Entrez votre commentaire ici"></textarea>
 	    <Input type="submit" name="valider" value="Valider">
 	</form>

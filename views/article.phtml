@@ -1,15 +1,15 @@
 <div class="row">
 	<p>
-		<?= $ligne['date'] ?>
+		<?= htmlentities ($ligne['date']) ?>
 	</p>
 	<img src="<?= $ligne['photo'] ?>">
 	<p>
-		<?= $ligne['titre'] ?>
-		<?= $ligne['login'] ?>
-		<?= $ligne['descriptif'] ?>
+		<?= htmlentities ($ligne['titre']) ?>
+		<?= htmlentities ($ligne['login']) ?>
+		<?= htmlentities ($ligne['descriptif']) ?>
 	</p>
 </div>
 
 <div>
-	<a href="?page=detail-article&id=<?= $ligne['id_articles'] ?>">En savoir plus</a>
+	<a href="?page=detail-article&id=<?= htmlentities ($ligne['id_articles']) ?>">En savoir plus</a>
 </div>

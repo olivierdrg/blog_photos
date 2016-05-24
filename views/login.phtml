@@ -4,13 +4,13 @@
         <div class="col-sm-6">
             <div class="row">
                 <label for="login">Login</label>
-                <input type="text" id="login" name="form[login]" value="<?= $form['login']['value'] ?>" class="<?= $form['login']['class'] ?>"> 
+                <input type="text" id="login" name="form[login]" value="<?= htmlentities ($form['login']['value']) ?>" class="<?= htmlentities ($form['login']['class']) ?>"> 
             </div>
         </div>
         <div class="col-sm-6">
             <div class="row">
                 <label for="password">Pass word</label>
-                <input type="password" id="password" name="form[password]" value="<?= $form['password']['value'] ?>" class="<?= $form['password']['class'] ?>"> 
+                <input type="password" id="password" name="form[password]" value="<?= htmlentities ($form['password']['value']) ?>" class="<?= htmlentities ($form['password']['class']) ?>"> 
             </div>
         </div>
     </div>
