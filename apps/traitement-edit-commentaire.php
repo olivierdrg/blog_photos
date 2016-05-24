@@ -7,24 +7,25 @@ if (!isset($_SESSION['login']))
 }
 
 
-if (isset($_POST['id_articles'], $_POST['id_admins'], $_POST['descriptif']))
-{
+if ( isset( $_POST['descriptif'] ) ) {
 
 	$success = true;
-	$id_articles = $_POST['id_articles'];
-	$id_admins = $_POST['id_admins'];
-	$descriptif = $_POST['descriptif'];
+	$descriptif =  $_POST['descriptif'];
+	$id_commentaires =  $_POST['id_commentaires'];
 
-	if(strlen($descriptif) == 0)
+	if ( strlen( $descriptif ) == 0 ) {
 		$success = false;
+	}
 		
-		if ($success){
+	if ( $success ) {
 
-			$ladate = date('Y-m-d H:m:i');
-			$query = "INSERT INTO commentaires (id_articles, id_admins, `date`, descriptif) VALUES ('" . $id_articles . "','" . $id_admins . "','" .  $ladate . "','" . $descriptif . "')";
+			$descriptif = mysqli_real_escape_string( $link, $descriptif );
+
+			$query = 'UPDATE commentaires SET descriptif = \'' . $descriptif . '\' WHERE id_commentaires = ' . $id_commentaires;
 			
+
 			$res = mysqli_query( $link, $query);
-			header('Location: ?page=detail-article&id='.$id_articles);
+			header('Location: ?page=articles');
 			exit;
 	}
 	else

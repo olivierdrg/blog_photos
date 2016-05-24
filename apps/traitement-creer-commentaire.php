@@ -18,7 +18,7 @@ if (isset($_POST['id_articles'], $_POST['id_admins'], $_POST['descriptif']))
 	if(strlen($descriptif) == 0)
 		$success = false;
 		
-		if ($success){
+	if ($success){
 
 			$ladate = date('Y-m-d H:m:i');
 			$query = "INSERT INTO commentaires (id_articles, id_admins, `date`, descriptif) VALUES ('" . $id_articles . "','" . $id_admins . "','" .  $ladate . "','" . $descriptif . "')";
