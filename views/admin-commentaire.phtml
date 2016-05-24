@@ -1,3 +1,6 @@
-<?php
-	require('apps/suppr-commentaire.php');
-?>
+<tr>
+    <td><a href="?page=edit-commentaire&id=<?= $ligne['id_commentaires'] ?>">Edit</a></td>
+    <td><a href="?page=suppr-commentaire&id=<?= $ligne['id_commentaires'] ?>">Supprimer</a></td>
+    <td><?= $ligne['date'] ?></td>
+    <td><?= $ligne['descriptif'] ?></td>
+</tr>
