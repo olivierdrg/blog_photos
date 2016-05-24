@@ -47,6 +47,7 @@
         'creer-commentaire',
         'suppr-commentaire',     
         'edit-commentaire',
+        'admin-commentaires',
     );
 
     $access_traitement = array(      
