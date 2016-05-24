@@ -1,6 +1,6 @@
 <?php
     $nav_menu = array(
-        'article' => array(
+        'articles' => array(
             'page'      => 'articles',
             'name'      => 'Articles',
             'active'    => '',
