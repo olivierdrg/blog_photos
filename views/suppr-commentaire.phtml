@@ -1,3 +1,13 @@
-<?php
+<form method="POST" class="register-form" enctype="multipart/form-data">
 
-?>
+    <div class="row">
+        <div class="col-sm-12">
+            <input type="hidden"  name="id" value="<?= $id ?>">
+            <label for="titre">Etes-vous sûr de vouloir supprimer ce commentaire ?</label>
+            <button type="submit" name="confirme" value="yes" class="button">Oui</button>
+            <button type="submit" name="confirme" value="no" class="button">Non</button>  
+           
+        </div>
+    </div>
+
+</form>
